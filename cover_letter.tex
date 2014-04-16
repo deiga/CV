@@ -1,0 +1,98 @@
+% Cover letter using letter.sty
+\documentclass{letter} % Uses 10pt
+\usepackage[finnish]{babel}
+\usepackage[utf8]{inputenc}
+%Use \documentstyle[newcent]{letter} for New Century Schoolbook postscript font
+% the following commands control the margins:
+\topmargin=-1in    % Make letterhead start about 1 inch from top of page
+\textheight=8in  % text height can be bigger for a longer letter
+\oddsidemargin=0pt % leftmargin is 1 inch
+\textwidth=6.5in   % textwidth of 6.5in leaves 1 inch for right margin
+
+\begin{document}
+
+\signature{Timo J. Sand}           % name for signature
+\longindentation=0pt                       % needed to get closing flush left
+\let\raggedleft\raggedright                % needed to get date flush left
+
+
+\begin{letter}{%Ms. Terri Roberts \\
+% Senior Staff Recruiter \\
+ Eficode Oy \\
+Kuortaneenkatu 2 \\
+00510 Helsinki
+}
+
+\begin{flushleft}
+{\large\bf Timo J. Sand}
+\end{flushleft}
+\medskip\hrule height 1pt
+\begin{flushright}
+\hfill Pakkamestarinkatu 4 E 87, 00520, Helsinki \\
+\hfill +358 44 565 5606, timo.j.sand@gmail.com
+\end{flushright}
+\vfill % forces letterhead to top of page
+
+
+\opening{Hyvä rekrytoija}
+
+% "oon tällanen jäbä, teidän firmanne kiinnostaa ja mä voisin tarjota teidän käyttöönne tällasen skillsetin"
+
+\noindent
+% PARAGRAPH ONE: State reason for letter, name the position or type
+% of work you are applying for and identify source from  which  you
+% learned   of   the  opening.  (i.e.  Career  Development  Center,
+% newspaper, employment service, personal contact).
+Kirjoitan hakeakseni mahdollista ohjelmistokehittäjän paikkaa.
+Opiskelen Helsingin yliopiston tietojenkäsittelytieteen laitoksella ja toimin Steeri Oy:ssä Senior Software Designerina. Tulen valmistumaan kesällä 2014 luonnontieteiden kandidaatiksi ja mahdollisesti jatkan syksyllä Filosofian Maisteri -tutkinnon suorittamista. Haluan siis pystyä tekemään työtä osa-aikasesti lukukauden aikana. Sain tiedon että haette työntekijöitä Joonas Magnússonilta sekä Sakumatti Luukkoselta.
+
+
+\noindent
+% PARAGRAPH  TWO:  Indicate why you are interested in the position,
+% the company, its products, services - above all, stress what  you
+% can  do  for  the employer. If you are a recent graduate, explain
+% how your academic background makes you a qualified candidate  for
+% the  position.  If  you have practical work experience, point out
+% specific achievements or unique qualifications. Try not to repeat
+% the  same  information  the reader will find in the resume. Refer
+% the reader to the enclosed resume or application which summarizes
+% your  qualifications,  training,  and experiences. The purpose of
+% this section is to strengthen your resume  by  providing  details
+% which bring your experiences to life.
+
+Olen aina halunnut osaamisellani ja työpanoksellani auttaa asiakasta toimimaan paremmin, tehokkaammin ja ystävällisemmin ja Eficoden tekemät projektit välittävät mielikuvan että Eficodessa pyritään samaan. Olen pystynyt vuosien varrella tutustumaan Eficoden toimintaan, Eficodelaisten kavereitten kautta ja minusta tuntuu että voisin viihtyä yrityksessä.
+
+\noindent
+% PARAGRAPH THREE: Request a personal interview and  indicate  your
+% flexibility as to the time and place. Repeat your phone number in
+% the letter and offer assistance to help in a speedy response. For
+% example,  state that you will be in the city where the company is
+% located on a certain date and would like to set up an  interview.
+% Or,  state  that  you  will  call  on a certain date to set up an
+% interview. End the letter by thanking  the  employer  for  taking
+% time to consider your credentials.
+Vahva osaamiseni antaa minulle eväät toimia niin frontend kuin backend puolella ja tarvittaessa kummallakin samanaikaisesti.
+Pääohjlemointikieli työssäni on ollut Java viimeiset neljä vuotta. Olen viimeisen kolmen vuoden ajan opetellut intohimoisesti Rubya, jona aikana olen ollut useassa Ruby on Rails -projektissa mukana. Viimeisen vuoden aikana olen kiinnostun JavaScriptistä enemmän ja olen tutustunut NodeJS:ään ja AngularJS:ään. Opintojeni yhteydessä olen osallistunut kolmen hengen SailsJS -projektiin, sekä Futuricen ja Ruisrockin järjestämään Hackathoniin, jossa olin osallisena NodeJS backendin toteuttamisessa. Tarkempaa tietoa osaamisestani löytyy CV:stäni
+
+
+Mikäli hakemukseni herätti mielenkiintonne, voitte ottaa minuun yhteyttä yllä merktyin tavoin.
+
+
+
+
+\closing{Ystävällisesti,}
+
+
+
+\encl{Curriculum Vitae}  				% Enclosures
+
+\end{letter}
+
+
+\end{document}
+
+
+
+
+
+
