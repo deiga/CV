@@ -1,0 +1,6 @@
+sudo: required
+language: generic
+services: docker
+
+script:
+  - docker run --mount src=$TRAVIS_BUILD_DIR/,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic cv_timosand.tex &; tectonic cv_timosand_en.tex;"
