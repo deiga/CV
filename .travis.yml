@@ -2,8 +2,7 @@ sudo: required
 language: generic
 services: docker
 script:
-- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
-  /bin/sh -c "tectonic cv_timosand.tex; tectonic cv_timosand_en.tex;"
+- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --print cv_timosand.tex; tectonic --print cv_timosand_en.tex;"
 before_deploy:
 # Set up git user name and tag this commit
 - git config --local user.name "deiga"
@@ -18,6 +17,6 @@ deploy:
   - ./cv_timosand.pdf
   - ./cv_timosand_en.pdf
   skip_cleanup: true
+  overwrite: true
   on:
-    tags: true
     branch: master
