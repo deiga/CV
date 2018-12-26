@@ -1,6 +1,17 @@
 sudo: required
 language: generic
 services: docker
-
 script:
-  - docker run --mount src=$TRAVIS_BUILD_DIR/,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic cv_timosand.tex; tectonic cv_timosand_en.tex;"
+- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
+  /bin/sh -c "tectonic cv_timosand.tex; tectonic cv_timosand_en.tex;"
+deploy:
+  provider: releases
+  api_key:
+    secure: ZzZSZj0g2oyiHka6E6tMJobJMn6hfnGl0ZwmwmNgaRVM8CUaQsvuItdd3ht2/QLmpy9RxGd9JgahfoOs307r0Z47Mnjzhb1RJGze4L4XOx4e3pFXS/+t1f3JujDT/sbabbWLwn5DyUR4PeOR9Q9WatH6sSyoK279mc4mgVXE21PQjBumz1jNi+XoFVtAZeRFRgIU3Vnei1P1Gr44NkZaoYymsJKlA4Tv9ChtzL7iAjoEAnOBFqyj1HX2Hid8iGWp/swvPWVg2ODJ8iL8rZ9DHQGhUWfN7sv2m6MUw5cdSseO8BaoUGLEe2k6/kgyiXu3DF29P1RJyIic+cECpDON1ULHTadytcxOJTxB9a1FsLD5jfzMpGvTopdNYHJ527wQONU7GtZMEFAcnnJLpJnPehNMOvusfb4lTM2BqCeuUYgf6IYi4ZMiSDEMvZ0FNbYhW+J+MkYUZxz4dwz8po3Yf9S7wkNVVaqbz0mcqS5zuijyGVIk2Ut4Ud1IJTiW4vweysnLt4x8+e/PofkXAGmaPeM2rkr2Vd8eW4uv9sBezPUrQP8I2Acj1G8t4hbbphzE0jHueqBKpxAezPT7kSUb3TNlbRqsINlQja67HLHp3/KCnkyVdglcvtPtAvWQrorarR8Hph8WVXVYX2jRcoP3SSAV9F4VW9ZjAaA5WxTmrls=
+  file:
+  - ./cv_timosand.pdf
+  - ./cv_timosand_en.pdf
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
