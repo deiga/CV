@@ -22,6 +22,9 @@
 \usepackage{babel}
 \usepackage[utf8]{inputenc}
 
+% To allow comment environment
+\usepackage{verbatim}
+
 
 % This is a helpful package that puts math inside length specifications
 \usepackage{calc}
@@ -208,120 +211,151 @@
 %
 \begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
 Timo Sand                           & \textit{Cell:} (+49) 176 856 17539 \\
-Klara-Franke-Straße 8            & \textit{E-mail:} \href{mailto:timo.sand@iki.fi}{timo.sand@iki.fi}\\
+Klara-Franke-Straße 8            & \textit{E-mail:} \href{mailto:hello@deiga.me}{hello@deiga.me}\\
 10577, Berlin
                                     & \textit{WWW:} \href{https://github.com/deiga/}{https://github.com/deiga/}\\
 \end{tabular}
 
 \section{Date of Birth} 05.12.1985
 
+\begin{comment}
 \section{Professional Interests}
 %
-DevOps, web application development, machine learning and neural networks
-
-\blankline
-
-\section{Education}
-%
-\begin{outerlist}
-
-\item[] B.Sc. [Expected],
-        \href{http://cs.helsinki.fi/}
-             {University of Helsinki, Department of Computer science}, Summer 2018
-        \begin{innerlist}
-        \item Area of Study: Machine Learning, Software Engineering
-        \item Exchange studies: \href{http://bath.ac.uk/}
-             {University of Bath, Department of Computer science}, September 2012 to June 2013
-        \end{innerlist}
-
-\item[] A-Levels,
-        \href{http://www.dsh.fi/Auf-Deutsch/Startseite}
-             {Deutsche Schule Helsinki (German school Helsinki)}, June 2005
-
-\end{outerlist}
+DevOps, Web App development, machine learning and neural networks
+\end{comment}
 \blankline
 
 \section{Work Experience}
 
+\href{http://www.wunderdog.fi/}{\textbf{Wunderdog GmbH}}
+\begin{outerlist}
+
+  \item[] \textit{Chief Technical Officer}%
+  \hfill \textbf{March 2018 to current }
+  \par
+  I was responsible for recruiting developers, negotiating technical details of sales deals, acquiring new customers,
+  staffing projects, planning growth trajectories of developers, evaluating the tech market and setting hiring requirements and building and evolving the company culture.
+  During the time I was also hands-on in customer projects.
+  \\
+  \\
+  \textbf{Projects}:
+  \begin{description}
+    \item [Smartly.io] Continued in the project.
+    \item [Home Rental Platform] I was part of a team to figure out the current state of their infrastructure and what are the biggest pain points considering an upcoming cloud provider migration.
+  \end{description}
+
+  \emph{Non-technical skills}: Communication, Mentoring, Business Development, Leadership, Feedback culture, Technical sales, Creating growth trajectories, Hiring developers
+  \par
+  \emph{Used technologies}: Kotlin, Ruby, Python, Node.js, JavaScript, Groovy, AWS, Ansible, Docker, Kubernetes, Elm.js, Webpack, React, Jenkins\\
+\end{outerlist}
+\blankline
+
 \href{http://www.wunderdog.fi/}{\textbf{Wunderdog Oy}}
 \begin{outerlist}
 
-  \item[] \textit{Senior Software Developer \& Consultant}%
+  \item[] \textit{Senior Software Developer \& Consultant}
   \hfill \textbf{September 2015 to current }
-  \begin{innerlist}
-    \item
-      I am part of team which develops new features to one of finlands biggest online entertainement services.\\
-    \item
-      I created an automated provisioning and deployment architecture for creating new instances of a multi-server system.
-      Ansible controls AWS EC2 instances and installs required components and configurations.\\
+  \par
+  I was a fullstack consultant working on a number of customer projects. As a consultant, I was working as a part of the customer's team on-premises at the customer.
 
-    \emph{Used technologies}: JavaScript, Java, Ruby, Node.js, ReactJS, ES6, Ansible, HTML5, CSS3, AWS\\
-  \end{innerlist}
+  When the Berlin office was founded I was promoted to CTO of the Berlin office.
+  \\
+  \\
+  \textbf{Projects}:
+  \begin{description}
+    \item [Finnish ISP] I was part of the team developing the web portal for a Finnish VOD service.
+    My role was a Fullstack developer with extensions into operations as I managed their CI environment.
+    The backend was based on Java with a custom stack of libraries and the frontend was JavaScript based on jQuery, Bacon.js and Require.js which we started transitioning towards React.js
+
+    \item [Recruitment Platform] I planned and built an Ansible setup to automate launching of new instances of the Platform for new customers into AWS.
+
+    \item [Smartly.io] I was responsible for migrating an old and stale CI system to a modern one, which would be easier to keep up-to-date and would offload work to developer teams.
+    The decision was made to work with Jenkins as a platform, but move as much as possible out of the hands of the CI system.
+    So all projects were restructured to run tests inside containers and using Jenkins Pipelines all projects had the recipes for how the CI system should handle them.\par
+    To all steps of the way, a mentality of configuration-as-code was applied which has allowed the team to create similar CI setups for other needs.
+    A big challenge of the transition was Dockerizing previously highly interdependent projects.
+    \par
+    Additionally, I was heavily involved in automatic and building developer tooling, which allowed developers to reset their development environment to a stable status quo.
+  \end{description}
+
+  \emph{Non-technical skills}: Communication, Technology consulting, Mentoring, Presenting, Business development
+  \par
+  \emph{Used technologies}: JavaScript, Java, Ruby, Node.js, Shell, Kotlin, Python, Groovy, Bacon.js, React.js, Ansible, HTML5, CSS3, AWS, Webpack, Docker, Elm.js, Jenkins, Kubernetes\\
 \end{outerlist}
 \blankline
 
 \href{http://www.uusimuste.fi/}{\textbf{Kirjakosmos Oy}}
 \begin{outerlist}
 
-  \item[] \textit{Partner \& Software Developer}%
+  \item[] \textit{Co-Founder \& Software Developer}%
   \hfill \textbf{February 2016 to current}
-  \begin{innerlist}
-    \item We are building an online bookstore for indie authors, where anyone kan publish their book in a digital format\\
+  \par
+  I joined the company just as they were ready to launch the initial version of Uusi Muste, an online indie book store.
+  My responsibilities were to design and develop new features for the marketplace.\\
 
-    \emph{Used technologies}: JavaScript, Python, Node.js, AngularJS, ES6, Ansible, HTML5, CSS3, AWS, Django, Clojure\\
-  \end{innerlist}
+  \emph{Non-technical skills}: Listen to customer needs, working on own product
+  \par
+  \emph{Used technologies}: JavaScript, Python, Node.js, AngularJS, Ansible, HTML5, CSS3, AWS, Django, Clojure, Virtualbox, Serverless, PostgreSQL\\
 \end{outerlist}
 \blankline
 
 \href{http://verkkokauppa.com/}{\textbf{Verkkokauppa.com Oyj}}
 \begin{outerlist}
-
   \item[] \textit{Front-end Developer}%
-  \hfill \textbf{March 2015 to July 2015}
-  \begin{innerlist}
-    \item
-
-    I was part of a team responsible for the development of new functionalities to the company's online services, an example of these are the company's e-commerce website, point of sale -system and the administration ERP, as well as responsive mobile site.
+  \hfill \textbf{March 2015 to July 2015}\par
+    I was part of a team responsible for the development of new functionalities to the company’s online services, an example of these are the company’s e-commerce website, point of sale -system and the administration ERP, as well as responsive mobile site.
     I was involved in implementing a new e-commerce buying process, as well as to add features to the mobile site.
-
-    \emph{Used technologies}: JavaScript, Node.js, ReactJS, AngularJS, ES6, Ansible, Ruby, HTML5, CSS3\\
-  \end{innerlist}
+    \par
+    \emph{Non-technical skills}: Product development workflow, building teams
+    \par
+    \emph{Used technologies}: PHP, JavaScript, Ruby, Node.js, Zend Framework, React.js, AngularJS, Ansible, HTML5, CSS3\\
 \end{outerlist}
 \blankline
 
 \href{http://eficode.fi/}{\textbf{Eficode Oy}}
 \begin{outerlist}
-
   \item[] \textit{Software Developer}%
-  \hfill \textbf{June 2014 to March 2015}
-  \begin{innerlist}
-    \item
-      During my time at Eficode I took part in several customer projects as either a front-end or full-stack developer. Some of these projects were Reposive, ePassi, and Spontaanipalaute.
-      Reposive is a desktop application that synchronizes your Git projects with a cloud service. I was responsible for developing the cloud service and desktop application onwards.
-      ePassi is an online service that provides cultural, sports and lunch benefits digitally. I was responsible for renewing paymentlogic for lunch benefits and implementing multiple marketing pages.
-      Spontaanipalaute is a health care customer feedback system, for which I designed the architecture and was involved in implementing the client interface, as well as the administration interface.\\
+  \hfill \textbf{June 2014 to March 2015}\par
+    During my time at Eficode I took part in several customer projects as either a front-end or full-stack developer.
+    \\
+    \\
+    \textbf{Projects}:
+    \begin{description}
+      \item [Healthcare Feedback System] I Planned and implemented micro-service architecture for the application.
+      I implemented the client and administration faced interfaces.
 
-    \emph{Used technologies}: Javascript, Node.js, Knockout.js, Ruby, Ruby on Rails, Java, Spring 4, Spring Cloud, AngularJS, Docker, Ansible\\
-    \emph{Skills}: Konsultointi, tarjousten tekeminen, kommunikaatio
-  \end{innerlist}
+      \item [Reposive] A desktop application that synchronizes your Git projects with a cloud service.
+      I was responsible for developing the Prototype into an MVP. The desktop application was built with Webkit and Knockout.js and the Cloud service was built with Node.js
+
+      \item [Digital Voucher System] In Finland employers compensate lunch and cultural and sports activities to employees.
+      This is mostly handled by paper vouchers. I was part of developing a digital voucher system to replace the analogue one.
+      I was responsible for renewing payment logic for lunch benefits and implementing multiple marketing pages.
+    \end{description}
+
+    \emph{Non-technical skills}: Technology consulting, making technical plans for offers, Communication
+    \par
+    \emph{Used technologies}: Javascript, Node.js, Knockout.js, Ruby, Ruby on Rails, Java, Spring Framework, Spring Cloud, AngularJS, Docker, Ansible, MySQL, HTML5, CSS3, MongoDB, Robot Framework\\
 \end{outerlist}
 \blankline
 
 \href{http://steeri.fi/}{\textbf{Steeri Oy}}
 \begin{outerlist}
+  \item[] \textit{Senior Software Developer}%
+  \hfill \textbf{August 2010 to April 2014}\par
+    Working in Development \& Integration team as an integration specialist.
+    I was responsible for the Continuos Integration systems, the Version control workflow
+    and release management. My tasks ranged from developing our own product,
+    building integration between customer systems, integrating customer systems
+    to our own product, administration of unix servers.
+    \par
 
-\item[] \textit{Senior Software Designer, Integration \& Architecture}%
-    \hfill \textbf{August 2010 to April 2014}
-    \begin{innerlist}
-		\item Working in Development \& Integration team as an integration specialist.
-        I was responsible for the Continous Integration systems, the Version control workflow and release management.
-         My tasks ranged from developing our own product, building integration between customer systems,
-         integrating customer systems to our own product, administration of unix servers.
-         \emph{Used technologies}: Java, Spring, Hibernate, Ruby, JavaSript, NodeJS, PHP, Apache HTTP
-         \emph{Skills}: Team working, communication, handling pressure, responding to critical changes
-    \end{innerlist}
+    \emph{Non-technical skills}: Dealing with multiple stakeholders, working with remote teams, mentoring, communication, handling pressure, responding to critical changes
+    \par
+    \emph{Used technologies}: Java, Ruby, PHP, JavaScript, Node.js, Spring Framework, Primefaces, Hibernate, Apache HTTP, TYPO3, MySQL, MongoDB, MS SQL, Mule ESB, Jenkins, UNIX, nginx, Tomcat
 \end{outerlist}
 \blankline
+
+\begin{comment} % COMMENTED OUT
 
 \href{http://www.helsinki.fi/university/index.html}{\textbf{University of Helsinki}}
 \begin{outerlist}
@@ -378,18 +412,36 @@ DevOps, web application development, machine learning and neural networks
 \end{outerlist}
 \blankline
 
+\end{comment}
+
 \section{Other activities}
 %
 \begin{outerlist}
 
-\item[] \textit{Organizations}
+\item[] \textit{Volunteer activities}
     \begin{innerlist}
+        \item Mentor, NodeSchool Helsinki, 2016 to 2018
+        \item Coach, RailsGirls Helsinki, April 2016
+        \begin{comment}
         \item IT Officer, International Students Association, Students' Union, University of Bath, 2012 to 2013
         \item Webmaster, SATY ry (Finnish Airedaleterrier Association), 2010 to 2011
         \item Webmaster, TKO-Äly ry (Computer Science student organization, University of Helsinki), 2009 to 2010
+        \end{comment}
     \end{innerlist}
 \end{outerlist}
 
+\section{Languages}
+%
+\begin{outerlist}
+
+\item[]
+    \begin{innerlist}
+        \item Native or bilingual proficiency: Finnish, German
+        \item Full professional proficiency: English
+        \item Limited working proficiency: Swedish
+    \end{innerlist}
+\end{outerlist}
+\begin{comment}
 \section{Skills}
 %
 \begin{outerlist}
@@ -405,7 +457,7 @@ DevOps, web application development, machine learning and neural networks
     \begin{innerlist}
         \item Ruby, Python, Java, C++, C
         \item HTML5, CSS, XML, JavaScript, SQL
-        \item Haskell, Clojure, Google Go, Scala
+        \item Haskell, Clojure, Google Go, Scala, Elixir
     \end{innerlist}
 
 \item[] \textit{Tools}
@@ -418,8 +470,29 @@ DevOps, web application development, machine learning and neural networks
         \item Methods: Scrum, Agile, Kanban, Behaviour-driven development, Test-driven development
         \item Office software: Microsoft Office, OpenOffice
     \end{innerlist}
+  \end{comment}
 
 \end{outerlist}
+
+\section{Education}
+%
+\begin{outerlist}
+
+\item[] B.Sc. [Aborted],
+        \href{http://cs.helsinki.fi/}
+             {University of Helsinki, Department of Computer Science}, 2006 to 2016
+        \begin{innerlist}
+        \item Area of Study: Machine Learning, Software Engineering
+        \item Exchange studies: \href{http://bath.ac.uk/}
+             {University of Bath, Department of Computer Science}, September 2012 to June 2013
+        \end{innerlist}
+\begin{comment}
+\item[] A-Levels,
+        \href{http://www.dsh.fi/Auf-Deutsch/Startseite}
+             {Deutsche Schule Helsinki (German school Helsinki)}, June 2005
+\end{comment}
+\end{outerlist}
+\blankline
 
 \end{document}
 
